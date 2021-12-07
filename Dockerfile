@@ -1,4 +1,4 @@
-FROM python:3.9-slim-bullseye
+FROM python:3.10.0-slim-bullseye
 ENV DEBIAN_FRONTEND=noninteractive
 RUN echo deb http://deb.debian.org/debian/ unstable main contrib non-free >> /etc/apt/sources.list && \
 	apt-get update && export DEBIAN_FRONTEND=noninteractive \
