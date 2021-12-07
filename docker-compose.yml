@@ -1,0 +1,23 @@
+version: "3"
+
+networks:
+  invmon:
+    external: true
+    
+
+services:
+  api:
+    image: ghcr.io/jtom38/invmon-api:master
+    environment:
+      - INVMON_DATABASE_NAME = 'newsbot.api'
+      - INVMON_DATABASE_TYPE = 'postgres'
+      - INVMON_DATABASE_PATH = '/'
+    ports:
+      - 8050:8000
+    networks:
+      - invmon
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "https://localhost:8050/health"]
+      timeout: 45s
+      interval: 10s
+      retries: 10
