@@ -4,7 +4,7 @@ This API is a tool that will monitor a site for when something comes in-stock an
 
 ## Getting Started
 
-1. Download Docker Image - TBD
+1. Download Docker Image
 1. Configure Docker Container
     1. Setup ENV flags
 1. Run Migrations
@@ -30,8 +30,21 @@ To upgrade the database, `alembic upgrade head`
 
 To rollback `alembic downgrade -1`
 
+### Running migrations from docker compose
+
+Because you will need to have your secrets to connect to your Postgres Server, you can run the migrations directly from your docker-compose.yaml file.  I will use the `docker-compose.yaml` in the project as an example.  The `api` call references the service named `api` in the compose file.  All of the `environment` values will be used as it talks to the database server.
+
+`docker compose run api alembic upgrade head`
+`docker compose run api alembic downgrade -1`
+
 ## Health Checks
 
 This project has health checks enabled so you can monitor how the API is doing.  The endpoint is `/health`.  
 
+### Docker Health Check
 
+See the `docker-compose.yaml` file for an example on how to configure the health check for Docker
+
+### Kubernets Health Check
+
+TBD
