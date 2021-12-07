@@ -1,0 +1,31 @@
+version: "3"
+
+networks:
+  invmon:
+    external: true
+    
+
+services:
+  api:
+    image: ghcr.io/jtom38/invmon-api:master
+    environment:
+      - INVMON_DATABASE_NAME=postgres
+      - INVMON_DATABASE_TYPE=postgres
+      - INVMON_DATABASE_USERNAME=postgres
+      - INVMON_DATABASE_PASSWORD=postgres
+      - INVMON_DATABASE_HOST=localhost
+
+      - INVMON_SMTP_HOST=smtp.gmail.com
+      - INVMON_SMTP_PORT=587
+      - INVMON_SMTP_USERNAME=addess@gmail.com
+      - INVMON_SMTP_PASSWORD=password
+    shm_size: 3gb
+    ports:
+      - 8050:8000
+    networks:
+      - invmon
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "https://localhost:8050/health"]
+      timeout: 45s
+      interval: 10s
+      retries: 10
