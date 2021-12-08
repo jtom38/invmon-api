@@ -1,6 +1,20 @@
 # Inventory Monitor (invmon) API
 
-This API is a tool that will monitor a site for when something comes in-stock and will alert you about it.
+- [Inventory Monitor (invmon) API](#inventory-monitor-invmon-api)
+  - [About](#about)
+  - [Getting Started](#getting-started)
+  - [Database](#database)
+  - [Database Migrations](#database-migrations)
+    - [Running migrations from docker compose](#running-migrations-from-docker-compose)
+  - [Health Checks](#health-checks)
+    - [Docker Health Check](#docker-health-check)
+    - [Kubernetes Health Check](#kubernetes-health-check)
+  - [Changelog](#changelog)
+    - [0.1.0](#010)
+
+## About
+
+This API is a tool that will monitor a site for when something comes in-stock and will alert you about it.  Right now, its still very early in its life and will get updates as I have free time to work on them.
 
 ## Getting Started
 
@@ -45,6 +59,20 @@ This project has health checks enabled so you can monitor how the API is doing. 
 
 See the `docker-compose.yaml` file for an example on how to configure the health check for Docker
 
-### Kubernets Health Check
+### Kubernetes Health Check
 
 TBD
+
+## Changelog
+
+### 0.1.0
+
+- The API will use Postgres as its primary DB.
+- Health checks have been added to monitor the DB and check on the `shopdisney.com` site.
+- The `shopdisney.com` site was added as a monitored inventory service.
+- The following tables where added to the database.
+  - SmtpContacts
+  - EmailAlerts
+  - ActiveAlerts
+- SMTP Information can be added via the environment variables.
+- SMTP was tested against gmail.
