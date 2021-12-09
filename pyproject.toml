@@ -17,7 +17,7 @@ beautifulsoup4 = "^4.10.0"
 alembic = "^1.7.4"
 psycopg2-binary = "^2.9.1"
 pyroscope-io = "^0.5.1"
-fastapi-healthcheck = "^0.2.3"
+fastapi-healthcheck = "^0.2.1"
 fastapi-healthcheck-sqlalchemy = "^0.1.0"
 fastapi-healthcheck-uri = "^0.1.0"
 
