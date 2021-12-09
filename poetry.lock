@@ -200,7 +200,7 @@ test = ["pytest (>=6.2.4,<7.0.0)", "pytest-cov (>=2.12.0,<4.0.0)", "mypy (==0.91
 
 [[package]]
 name = "fastapi-healthcheck"
-version = "0.2.2"
+version = "0.2.3"
 description = "Base package to handle health checks with FastAPI."
 category = "main"
 optional = false
@@ -855,8 +855,8 @@ fastapi = [
     {file = "fastapi-0.70.0.tar.gz", hash = "sha256:66da43cfe5185ea1df99552acffd201f1832c6b364e0f4136c0a99f933466ced"},
 ]
 fastapi-healthcheck = [
-    {file = "fastapi_healthcheck-0.2.2-py3-none-any.whl", hash = "sha256:54aed1a80a7bc826dd2bb95c170d30498ae89484811c9fde1938d9c8fb95eefe"},
-    {file = "fastapi_healthcheck-0.2.2.tar.gz", hash = "sha256:a88928f0c33ed9c81d37ffc6962c9ce6c57c050d6ce9bc8095664838cbf98a08"},
+    {file = "fastapi_healthcheck-0.2.3-py3-none-any.whl", hash = "sha256:171f5b7513f1a704965cd0c4be5c343d4bbcda3d1fec2d08ce7543a2fa7adc68"},
+    {file = "fastapi_healthcheck-0.2.3.tar.gz", hash = "sha256:e57fb33687a18cf4a0e12a086f5535757089f2012d626c34e3cfb3b3399c7874"},
 ]
 fastapi-healthcheck-sqlalchemy = [
     {file = "fastapi-healthcheck-sqlalchemy-0.1.0.tar.gz", hash = "sha256:ab0e47955fb37f5204aa642d4e5a884f1b58111f63c89f5936662091e910da7c"},

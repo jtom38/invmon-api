@@ -9,7 +9,7 @@ services:
   api:
     image: ghcr.io/jtom38/invmon-api:master
     environment:
-      - INVMON_DATABASE_NAME=postgres
+      - INVMON_DATABASE_NAME=invmon
       - INVMON_DATABASE_TYPE=postgres
       - INVMON_DATABASE_USERNAME=postgres
       - INVMON_DATABASE_PASSWORD=postgres

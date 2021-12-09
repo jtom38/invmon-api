@@ -42,7 +42,7 @@ app.add_middleware(DBSessionMiddleware, db_url=cs.value)
 
 # Add Health Checks
 _healthChecks = HealthCheckFactory()
-_healthChecks.add(HealthCheckSQLAlchemy(alias='postgres db', table=SmtpContactsSqlModel, tags=('postgres', 'db', 'sql01.home.local')))
+_healthChecks.add(HealthCheckSQLAlchemy(alias='postgres db', table=SmtpContactsSqlModel, tags=('postgres', 'db')))
 _healthChecks.add(HealthCheckUri(alias='shopdisney', connectionUri="https://www.shopdisney.com/", tags=('external', 'shopdisney', 'uri')))
 
 app.add_api_route('/health', endpoint=healthCheckRoute(factory=_healthChecks), include_in_schema=False)
