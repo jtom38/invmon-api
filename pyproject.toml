@@ -7,7 +7,7 @@ authors = ["James Tombleson <luther38@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 fastapi = "^0.70.0"
-selenium = "^4.0.0"
+selenium = "^4.4.3"
 APScheduler = "^3.8.0"
 uvicorn = "^0.15.0"
 python-dotenv = "^0.19.1"
